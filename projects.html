@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects Gallery - Grid Layout</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1fd7ef",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                        "surface-dark": "#1E293B",
+                        "card-border": "#283739",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for deep space feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #102022;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283739;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1fd7ef;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111718] dark:text-white font-display overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-b-[#283739] bg-[#102022]/95 backdrop-blur-sm px-6 py-4 md:px-10">
+<div class="mx-auto max-w-7xl flex items-center justify-between">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">terminal</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-tight">DevPortfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-primary text-sm font-medium transition-colors" href="projects.html">Projects</a>
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="#">Resume</a>
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="contact.html">Contact</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#283739] text-white hover:bg-[#334648] hover:text-primary transition-all">
+<span class="material-symbols-outlined">hub</span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#283739] text-white hover:bg-[#334648] hover:text-primary transition-all">
+<span class="material-symbols-outlined">person</span>
+</button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#283739] text-white hover:bg-[#334648] transition-all">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full px-6 py-8 md:px-10 lg:px-20">
+<div class="mx-auto max-w-7xl flex flex-col gap-10">
+<!-- Page Heading -->
+<div class="flex flex-col gap-4 max-w-3xl">
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                    Engineering Archive
+                </h1>
+<p class="text-[#9db6b9] text-lg font-normal leading-relaxed">
+                    A curated collection of high-performance web applications, algorithmic experiments, and system architecture designs. 
+                    Exploring the intersection of clean code and complex logic.
+                </p>
+</div>
+<!-- Filter Bar -->
+<div class="flex flex-wrap gap-3 py-2">
+<button class="group flex h-9 items-center justify-center rounded-lg bg-primary px-5 transition-all shadow-[0_0_10px_rgba(31,215,239,0.3)]">
+<span class="text-[#102022] text-sm font-bold">All</span>
+</button>
+<button class="group flex h-9 items-center justify-center rounded-lg bg-[#1E293B] px-5 hover:bg-[#283739] transition-all border border-[#283739] hover:border-primary/50">
+<span class="text-gray-300 group-hover:text-white text-sm font-medium">Web Dev</span>
+</button>
+<button class="group flex h-9 items-center justify-center rounded-lg bg-[#1E293B] px-5 hover:bg-[#283739] transition-all border border-[#283739] hover:border-primary/50">
+<span class="text-gray-300 group-hover:text-white text-sm font-medium">Machine Learning</span>
+</button>
+<button class="group flex h-9 items-center justify-center rounded-lg bg-[#1E293B] px-5 hover:bg-[#283739] transition-all border border-[#283739] hover:border-primary/50">
+<span class="text-gray-300 group-hover:text-white text-sm font-medium">Systems</span>
+</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+<!-- Card 1: E-Commerce -->
+<div class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-[#283739] hover:border-primary/50 hover:shadow-[0_0_15px_rgba(31,215,239,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Dashboard interface displaying data analytics charts and graphs with dark theme" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcDd5wHmC7exSC4XZC3OIKaLL3KLtu3oT9YmLLfrB8R9V181bflt8XHZAIFtyAJg22bJ335-5vL3hiYnH1vMTb0DtKESRQw8BBpaecb_aHH68ho0H5ztzx-SlsLa-4WtlWc-tTEuqtiUj2y74sw3yiCReIxEhoFP8OgjXzWt4TdsmoAcEJX371c_p8rYxJd6GLN4ZD-NCwsifH365_I6nyzW-NzG2maQzasO40bqfcxQjdCFm7dnM9kk3TGk2ulsHb6bn2GHwR4zQL");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold tracking-tight">E-Commerce Dashboard</h3>
+</div>
+<p class="text-[#9db6b9] text-sm leading-relaxed flex-1">
+                            A full-stack dashboard featuring real-time analytics and inventory management. Implements complex state management with Redux and optimized API caching strategies using Redis.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">React</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Redis</span>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-[#283739]">
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg bg-[#283739] text-white hover:bg-primary hover:text-[#102022] transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>View Code</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg border border-[#283739] text-primary hover:border-primary transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Live Demo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Drone -->
+<div class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-[#283739] hover:border-primary/50 hover:shadow-[0_0_15px_rgba(31,215,239,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Drone flying in a mountain landscape capturing data" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1PBvDKCNlPn5hTrxv8m2eggONNNFu-YrqFRQbSXhYQGkijag3bAMaeII6YG64J_142dOBen0JqB5qPaO5YnLMqLmDjVSmxybSC6NXCBm2Amp05Mouw0ojepuL-w8absmliU8RssWAXkT0YN8UoO-xTM-alDDjhbuY_kMxionGI8ZLAX80y7ymjZ4A1dCT467iAw4n17Z4UqDCOkBMMKK-k9Nvo8SYAJlbivNHNfcvfDo_NXZuVuAPAhMzaNbJCzAdZZX3pbuN_9Fv");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold tracking-tight">Vision Drone Controller</h3>
+</div>
+<p class="text-[#9db6b9] text-sm leading-relaxed flex-1">
+                            Autonomous flight control system using YOLOv5 for real-time object detection. Optimized for low-latency processing on edge devices with custom CUDA kernels.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Python</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">PyTorch</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">CUDA</span>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-[#283739]">
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg bg-[#283739] text-white hover:bg-primary hover:text-[#102022] transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>View Code</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg border border-[#283739] text-primary hover:border-primary transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Live Demo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: OS Kernel -->
+<div class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-[#283739] hover:border-primary/50 hover:shadow-[0_0_15px_rgba(31,215,239,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Computer screen displaying complex code syntax in a dark terminal theme" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIqSzZy4FodHOYM7OC7NV5aHti7y-KpNyYxesWdk1CYX8WL8FgHD7g1mgBAUW5gmls5Bh6h84tFPTq4YfUd6LyObxMZU345mzjOJJwXd07L3wyKTspj-q28yr7aej458hxj9Y_NuvxwxO_wZgjkmsXG-BbhXhhTfjhPi3J_-Knb0PqbixYjpYhe0zOmwrFFMnIm_Gw8UKaNwtvpxYco102W6goMEs1zTXKZHISHUX4YtGFB0GtIv6wmMDr6kmjXzOlJ_8YavNtZEvz");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold tracking-tight">Mini-Kernel v0.1</h3>
+</div>
+<p class="text-[#9db6b9] text-sm leading-relaxed flex-1">
+                            A minimal 32-bit operating system kernel written from scratch. Features preemptive multitasking, a virtual file system, and a custom shell.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">C</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Assembly</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Systems</span>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-[#283739]">
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg bg-[#283739] text-white hover:bg-primary hover:text-[#102022] transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>View Code</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg border border-[#283739] text-gray-500 cursor-not-allowed text-sm font-semibold" disabled="">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+<span>No Demo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Crypto Exchange -->
+<div class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-[#283739] hover:border-primary/50 hover:shadow-[0_0_15px_rgba(31,215,239,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Abstract digital network visualization with glowing blue nodes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDj_wEq_uJzurGvjGOy3lbKhsO_DvTAnkL7_msupr-9E9WNrv5Zf0tqCYUcKveBcsMIiHXrY6sr-D5QfSe3sfSeVSgcSAGvf_cOj0ib6yxDEy75whDG0XAX7CGXh2hClSR689ufxyRyIBs07fioDxP--ixo-o7Fu9Y7sLchfvAXgTJzzYbsjxGoIRS9lj8tVab0gvH5427sLyx3WWkevTbjhiVDUtLZK8-dnNhMiLDdzg2TLVjrJLdfdEI3vUwS6zc0OdcWGRbFb1HV");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold tracking-tight">DeFi Exchange</h3>
+</div>
+<p class="text-[#9db6b9] text-sm leading-relaxed flex-1">
+                            Decentralized exchange interface interacting with Ethereum smart contracts. Built with Web3.js and features real-time gas fee estimation.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Solidity</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Web3.js</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">React</span>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-[#283739]">
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg bg-[#283739] text-white hover:bg-primary hover:text-[#102022] transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>View Code</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg border border-[#283739] text-primary hover:border-primary transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Live Demo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: NLP Chatbot -->
+<div class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-[#283739] hover:border-primary/50 hover:shadow-[0_0_15px_rgba(31,215,239,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Artificial intelligence concept visualization with neural network connections" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAD4nCzsLjbK_QQKy0Nw3KMFezCfc1AHalNBRLnjNFrV3x1m5fbM4x1nkTpvJCdB6ymZYrHOVzheQ8HtjTl7J8jpSZ9aJwwTibleB_v8NiiFHI5qvftex9vEZfITMSDyxKEQkHHIo9F-QoEmNi_vI8VJ7QIex7zoDdBlutVv1O9ovi7a-XiraxsF5uZKc7o_mQCkW0bT-y_3QTxMs4FA_PKSGUzmXU3bCEEkFet6GVR2cADXUT0ywZrXshcU_f5J8h6qkCXkoOW4ZmC");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold tracking-tight">Neural NLP Chatbot</h3>
+</div>
+<p class="text-[#9db6b9] text-sm leading-relaxed flex-1">
+                            Context-aware chatbot powered by a fine-tuned Transformer model. Capable of maintaining long-term context conversation history.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">TensorFlow</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Python</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">NLP</span>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-[#283739]">
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg bg-[#283739] text-white hover:bg-primary hover:text-[#102022] transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>View Code</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg border border-[#283739] text-primary hover:border-primary transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Live Demo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Database Engine -->
+<div class="group flex flex-col bg-surface-dark rounded-xl overflow-hidden border border-[#283739] hover:border-primary/50 hover:shadow-[0_0_15px_rgba(31,215,239,0.1)] transition-all duration-300 hover:-translate-y-1">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Close up of server rack cables in a data center with blue lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBe4cfGOXp7yefvSC9NmOAx9s60GkHmF5dkV5Zz0QarkvY0nmaGLlhL-ySQzIcTYH_R2Sj5uGQ_Ps4xd-VukfvczJAwD0nmUjL_QDhfpSlPON66TQ32vpXLmzBY63til7Frep4qn9ZnjzSiCkoIVbBRlBToU6P1pVZn3F5paLuQZi01UkJi4WzektGr9hBoToOgF9eLQY_efr96FVg9ktKbFruwal0yGNb1w7NfTPx5QI9dClzVPkxiQr2XopEyUEQQ9lT47eMfrF3v");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col flex-1 p-5 gap-4">
+<div class="flex justify-between items-start">
+<h3 class="text-white text-xl font-bold tracking-tight">Distributed KV Store</h3>
+</div>
+<p class="text-[#9db6b9] text-sm leading-relaxed flex-1">
+                            A highly available key-value store implementing the Raft consensus algorithm for fault tolerance and leader election.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Go</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">gRPC</span>
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary text-xs font-semibold">Distributed Systems</span>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-[#283739]">
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg bg-[#283739] text-white hover:bg-primary hover:text-[#102022] transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>View Code</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-9 rounded-lg border border-[#283739] text-gray-500 cursor-not-allowed text-sm font-semibold" disabled="">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+<span>No Demo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="w-full border-t border-solid border-[#283739] py-8 bg-[#102022]">
+<div class="mx-auto max-w-7xl px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#9db6b9] text-sm">© 2023 DevPortfolio. Built with pure code.</p>
+<div class="flex gap-4">
+<a class="text-[#9db6b9] hover:text-primary transition-colors text-sm" href="#">GitHub</a>
+<a class="text-[#9db6b9] hover:text-primary transition-colors text-sm" href="#">LinkedIn</a>
+<a class="text-[#9db6b9] hover:text-primary transition-colors text-sm" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

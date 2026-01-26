@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Me - Education &amp; Bio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1fd7ef",
+                        "background-light": "#f6f8f8", // Keeping config but mainly using dark mode
+                        "background-dark": "#102022",
+                        "surface-dark": "#1a2c30",
+                        "surface-darker": "#111718",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    boxShadow: {
+                        'glow': '0 0 15px -3px rgba(31, 215, 239, 0.3)',
+                        'glow-lg': '0 0 25px -5px rgba(31, 215, 239, 0.4)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white transition-colors duration-300 min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#283739] bg-[#111718]/90 backdrop-blur-md">
+<div class="px-4 md:px-10 py-3 mx-auto max-w-7xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined !text-[32px]">terminal</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] font-mono">Dev_Portfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-primary text-sm font-medium" href="about.html">About</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="projects.html">Projects</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="contact.html">Contact</a>
+</nav>
+<div class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center w-full px-4 py-8 md:py-16">
+<div class="w-full max-w-6xl">
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<!-- Left Column: Bio & Narrative -->
+<div class="flex flex-col gap-8 order-2 lg:order-1">
+<!-- Terminal-style Bio -->
+<div class="bg-surface-darker border border-[#283739] rounded-xl overflow-hidden shadow-glow-lg">
+<!-- Terminal Header -->
+<div class="bg-[#1a2325] px-4 py-2 border-b border-[#283739] flex items-center gap-2">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+<div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+<div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+</div>
+<span class="ml-4 text-xs text-gray-400 font-mono">user@dev-portfolio: ~/bio</span>
+</div>
+<!-- Terminal Content -->
+<div class="p-6 md:p-8 font-mono">
+<h1 class="text-3xl md:text-5xl font-black leading-tight tracking-tight text-white mb-2">
+                                System.Init<span class="text-primary">(Bio)</span>
+</h1>
+<div class="text-primary/70 text-sm mb-6 font-bold tracking-widest uppercase">
+                                // Developer · Problem Solver · CS Graduate
+                            </div>
+<p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
+<span class="text-primary">&gt;</span> Hello World! I'm a CS graduate passionate about building scalable systems. My journey began with a curiosity for how things work under the hood, leading me to explore the depths of operating systems and distributed networks.
+                            </p>
+<p class="text-gray-300 text-base md:text-lg leading-relaxed">
+<span class="text-primary">&gt;</span> Currently, I focus on creating clean, efficient code that powers modern web applications. I believe in continuous deployment and continuous learning. <span class="animate-pulse inline-block w-2.5 h-5 bg-primary align-middle ml-1"></span>
+</p>
+</div>
+<!-- Action Bar -->
+<div class="px-6 pb-6 md:px-8 md:pb-8">
+<button class="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/50 hover:border-primary transition-all duration-300 rounded-lg px-6 py-3 text-sm font-bold font-mono uppercase tracking-wider flex items-center gap-2 group">
+<span class="material-symbols-outlined text-[20px] group-hover:animate-bounce">download</span>
+                                Download_Resume.pdf
+                            </button>
+</div>
+</div>
+<!-- Education Block -->
+<div class="bg-[#1a2c30]/50 backdrop-blur-sm border border-[#283739] rounded-xl p-6 md:p-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h2 class="text-2xl font-bold text-white">Academic Build</h2>
+</div>
+<div class="space-y-6">
+<!-- Degree Item -->
+<div class="relative pl-6 border-l-2 border-primary/30 hover:border-primary transition-colors duration-300">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-background-dark border-2 border-primary"></div>
+<h3 class="text-xl font-bold text-white">Bachelor of Science in Computer Science</h3>
+<p class="text-primary/80 font-medium mt-1">University of Technology</p>
+<p class="text-gray-500 text-sm mt-1 font-mono">Graduated: 2023 · GPA: 3.8/4.0</p>
+</div>
+<!-- Coursework Chips -->
+<div class="pt-2">
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Key Coursework initialized:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-md bg-[#283739] text-primary text-xs font-mono font-medium border border-transparent hover:border-primary/50 hover:bg-[#283739]/80 hover:shadow-glow transition-all cursor-default">
+                                        algorithms_&amp;_data_structures
+                                    </span>
+<span class="px-3 py-1.5 rounded-md bg-[#283739] text-primary text-xs font-mono font-medium border border-transparent hover:border-primary/50 hover:bg-[#283739]/80 hover:shadow-glow transition-all cursor-default">
+                                        operating_systems
+                                    </span>
+<span class="px-3 py-1.5 rounded-md bg-[#283739] text-primary text-xs font-mono font-medium border border-transparent hover:border-primary/50 hover:bg-[#283739]/80 hover:shadow-glow transition-all cursor-default">
+                                        distributed_systems
+                                    </span>
+<span class="px-3 py-1.5 rounded-md bg-[#283739] text-primary text-xs font-mono font-medium border border-transparent hover:border-primary/50 hover:bg-[#283739]/80 hover:shadow-glow transition-all cursor-default">
+                                        machine_learning
+                                    </span>
+<span class="px-3 py-1.5 rounded-md bg-[#283739] text-primary text-xs font-mono font-medium border border-transparent hover:border-primary/50 hover:bg-[#283739]/80 hover:shadow-glow transition-all cursor-default">
+                                        database_management
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Element -->
+<div class="order-1 lg:order-2 h-full flex items-center justify-center lg:sticky lg:top-24">
+<div class="relative w-full aspect-square max-w-md lg:max-w-full">
+<!-- Decorative glow behind -->
+<div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
+<!-- Main Image Container -->
+<div class="relative w-full h-full rounded-2xl overflow-hidden border border-[#283739] shadow-2xl group">
+<!-- Overlay gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60 z-10"></div>
+<!-- Image -->
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract dark cybernetic visual representing technology and deep space data" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYQ9Mz598h1oK57o91mceylfPQ-VQTWk3dG0r-zUIcgQavpsyhfsECIksHXL2Xd9NuFD1cyYFVi-mVivGdUpKwCBeXagLYFyIiKGZ17JiTjx-2q0qdTj28Cy8YkSPl9NP3W6Xof63WkX7uUFQuOc4jlRSNlRmJz0tstF0UhiwJHkZIdv2_M-oD6r9V18NqbaLstED4imk1VA85sLTy0ClndZwcg2iA_0_ApXsugBQVoLNJKWOY3DYYonggqC8YYCHID3pAdoo9LoOq');"></div>
+<!-- Decorative overlay text/elements -->
+<div class="absolute bottom-6 left-6 z-20">
+<div class="bg-background-dark/80 backdrop-blur-md border border-primary/20 rounded-lg p-3 inline-flex items-center gap-3">
+<div class="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-xs font-mono text-white">System Status: Online</span>
+</div>
+</div>
+<!-- Tech decoration lines -->
+<div class="absolute top-6 right-6 z-20 w-16 h-16 border-t-2 border-r-2 border-primary/50 rounded-tr-xl"></div>
+<div class="absolute bottom-6 left-6 z-20 w-16 h-16 border-b-2 border-l-2 border-primary/50 rounded-bl-xl pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="w-full border-t border-[#283739] bg-[#111718] py-8 mt-12">
+<div class="px-4 md:px-10 mx-auto max-w-7xl flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-sm font-mono">© 2023 Dev_Portfolio. All systems go.</p>
+<div class="flex gap-6">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">code</span>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
