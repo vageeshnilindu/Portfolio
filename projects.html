@@ -17,46 +17,9 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1fd7ef",
-                        "background-light": "#f6f8f8",
-                        "background-dark": "#102022",
-                        "surface-dark": "#1E293B",
-                        "card-border": "#283739",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"],
-                        "body": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        /* Custom scrollbar for deep space feel */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #102022;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #283739;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #1fd7ef;
-        }
-    </style>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
 </head>
 
 <body
@@ -94,13 +57,21 @@
 <span class="material-symbols-outlined">person</span>
 </button> -->
                 <!-- Mobile Menu Button -->
-                <button
+                <button id="mobile-menu-btn"
                     class="md:hidden flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#283739] text-white hover:bg-[#334648] transition-all">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
-        </div>
     </header>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu"
+        class="hidden fixed top-[72px] left-0 w-full bg-[#102022]/95 backdrop-blur-md border-b border-[#283739] md:hidden z-40 flex flex-col p-4 gap-4 shadow-xl text-white">
+        <a href="index.html" class="font-medium text-lg px-4 py-2 hover:bg-white/5 rounded-lg text-slate-400">Home</a>
+        <a href="about.html" class="font-medium text-lg px-4 py-2 hover:bg-white/5 rounded-lg text-slate-400">About</a>
+        <a href="projects.html" class="text-primary font-bold text-lg px-4 py-2 bg-primary/10 rounded-lg">Projects</a>
+        <a href="contact.html"
+            class="font-medium text-lg px-4 py-2 hover:bg-white/5 rounded-lg text-slate-400">Contact</a>
+    </div>
     <!-- Main Content Area -->
     <main class="flex-1 w-full px-6 py-8 md:px-10 lg:px-20">
         <div class="mx-auto max-w-7xl flex flex-col gap-10">
@@ -376,19 +347,33 @@
             </div>
         </div>
     </main>
-    <!-- Simple Footer -->
-    <footer class="w-full border-t border-solid border-[#283739] py-8 bg-[#102022]">
-        <div class="mx-auto max-w-7xl px-10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-[#9db6b9] text-sm">© 2026 Vageesh.init(). Built with pure code.</p>
-            <div class="flex gap-4">
-                <a class="text-[#9db6b9] hover:text-primary transition-colors text-sm"
-                    href="https://github.com/vageeshnilindu" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="text-[#9db6b9] hover:text-primary transition-colors text-sm" href="#">LinkedIn</a>
-                <a class="text-[#9db6b9] hover:text-primary transition-colors text-sm" href="#">Twitter</a>
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-white/5 bg-slate-100 dark:bg-[#080c17] mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <span class="text-slate-900 dark:text-white font-mono font-bold text-lg">Vageesh.init()</span>
+
+                    <p class="text-slate-500 text-sm text-center md:text-left">
+                        © 2026. Built with HTML, Tailwind & JS.
+                    </p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                        href="https://github.com/vageeshnilindu" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined text-2xl">code</span> <!-- GitHub rep -->
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110" href="#">
+                        <span class="material-symbols-outlined text-2xl">work</span> <!-- LinkedIn rep -->
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110" href="#">
+                        <span class="material-symbols-outlined text-2xl">alternate_email</span> <!-- Twitter rep -->
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

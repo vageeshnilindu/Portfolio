@@ -1,0 +1,27 @@
+/* Global Utilities - Converted from Tailwind @apply for external usage */
+.glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(11, 17, 32, 0.8);
+    /* bg-background-dark/80 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* border-white/5 */
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B1120;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #151e32;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1fd7ef;
+}

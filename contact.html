@@ -15,32 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1fd7ef",
-                        "background-light": "#f6f8f8",
-                        "background-dark": "#102022",
-                        "surface-dark": "#162a2d",
-                        "surface-dark-hover": "#1d363a",
-                        "border-dark": "#283739",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    backgroundImage: {
-                        'space-gradient': 'radial-gradient(circle at top right, #1fd7ef0f, transparent 40%), radial-gradient(circle at bottom left, #1fd7ef08, transparent 40%)',
-                    },
-                    boxShadow: {
-                        'cyan-glow': '0 0 20px -5px rgba(31, 215, 239, 0.3)',
-                    }
-                },
-            },
-        }
-    </script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
 
 <body
@@ -81,6 +58,22 @@
                 <span>Resume_v4.pdf</span>
                 <span class="material-symbols-outlined ml-2 text-lg">download</span>
             </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-900 dark:text-white p-2">
+                <span class="material-symbols-outlined text-[32px]">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden absolute top-[72px] left-0 w-full bg-white/95 dark:bg-[#102022]/95 backdrop-blur-md border-b border-slate-200 dark:border-[#283739] md:hidden flex flex-col p-4 gap-4 shadow-xl z-50">
+            <a href="index.html"
+                class="font-medium text-lg px-4 py-2 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg text-slate-600 dark:text-slate-400">Home</a>
+            <a href="about.html"
+                class="font-medium text-lg px-4 py-2 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg text-slate-600 dark:text-slate-400">About</a>
+            <a href="projects.html"
+                class="font-medium text-lg px-4 py-2 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg text-slate-600 dark:text-slate-400">Projects</a>
+            <a href="contact.html" class="text-primary font-bold text-lg px-4 py-2 bg-primary/10 rounded-lg">Contact</a>
         </div>
     </header>
     <!-- Main Content -->
@@ -273,13 +266,32 @@
         </div>
     </main>
     <!-- Footer -->
-    <footer class="border-t border-border-dark bg-background-dark py-8 text-center text-sm text-slate-600 mt-auto">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>© 2026 Vageesh.init() Portfolio. All systems operational.</p>
-            <p class="mt-2 text-xs font-mono">Designed with engineering precision.</p>
+    <footer class="border-t border-slate-200 dark:border-white/5 bg-slate-100 dark:bg-[#080c17] mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <span class="text-slate-900 dark:text-white font-mono font-bold text-lg">Vageesh.init()</span>
+
+                    <p class="text-slate-500 text-sm text-center md:text-left">
+                        © 2026. Built with HTML, Tailwind & JS.
+                    </p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                        href="https://github.com/vageeshnilindu" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined text-2xl">code</span> <!-- GitHub rep -->
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110" href="#">
+                        <span class="material-symbols-outlined text-2xl">work</span> <!-- LinkedIn rep -->
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110" href="#">
+                        <span class="material-symbols-outlined text-2xl">alternate_email</span> <!-- Twitter rep -->
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

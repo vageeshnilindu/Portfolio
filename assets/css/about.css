@@ -1,0 +1,8 @@
+/* About Page Specific Styles */
+.shadow-glow {
+    box-shadow: 0 0 15px -3px rgba(31, 215, 239, 0.3);
+}
+
+.shadow-glow-lg {
+    box-shadow: 0 0 25px -5px rgba(31, 215, 239, 0.4);
+}

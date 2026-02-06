@@ -1,0 +1,12 @@
+/* Home Page Specific Styles */
+.text-glow {
+    text-shadow: 0 0 10px rgba(31, 215, 239, 0.3);
+}
+
+.btn-glow {
+    box-shadow: 0 0 15px rgba(31, 215, 239, 0.3);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 25px rgba(31, 215, 239, 0.5);
+}

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.addEventListener('click', () => {
         // Toggle the class
         htmlElement.classList.toggle('dark');
-        
+
         // Save the new state to localStorage
         if (htmlElement.classList.contains('dark')) {
             localStorage.setItem('color-theme', 'dark');
@@ -25,4 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('color-theme', 'light');
         }
     });
+
+    // 3. Mobile Menu Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 });
