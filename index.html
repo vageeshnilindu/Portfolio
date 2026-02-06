@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Dev Portfolio - Deep Space</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dev Portfolio - Deep Space</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -41,7 +49,7 @@
             },
         }
     </script>
-<style type="text/tailwindcss">
+    <style type="text/tailwindcss">
         @layer utilities {
             .glass-nav {
                 @apply backdrop-blur-md bg-background-dark/80 border-b border-white/5;
@@ -73,197 +81,232 @@
         }
     </style>
 </head>
-<body class="bg-background-dark text-slate-300 font-display antialiased selection:bg-primary selection:text-background-dark overflow-x-hidden">
-<div class="relative flex flex-col min-h-screen">
-<!-- Background Elements -->
-<div class="fixed inset-0 z-0 pointer-events-none">
-<!-- Central Nebula Glow -->
-<div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
-<!-- Bottom Glow -->
-<div class="absolute bottom-[-10%] left-1/4 w-[600px] h-[400px] bg-blue-900/10 rounded-full blur-[100px]"></div>
-</div>
-<!-- Sticky Navigation -->
-<nav class="sticky top-0 z-50 glass-nav w-full">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
-<!-- Logo -->
-<div class="flex-shrink-0">
-<a class="flex items-center gap-2 group" href="#">
-<span class="text-primary font-mono text-xl font-bold tracking-tighter group-hover:text-glow transition-all">Vageesh.init()</span>
-</a>
-</div>
-<!-- Desktop Menu -->
-<div class="hidden md:block">
-<div class="ml-10 flex items-baseline space-x-8">
-<a class="text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="index.html">Home</a>
-<a class="text-slate-400 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="projects.html">Projects</a>
-<a class="text-slate-400 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="about.html">About</a>
-<a class="text-slate-400 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="contact.html">Contact</a>
-</div>
-</div>
-<!-- CTA -->
-<div class="hidden md:block">
-<button class="bg-surface-dark hover:bg-surface-dark/80 text-primary border border-primary/20 hover:border-primary/50 px-4 py-2 rounded-lg text-sm font-mono font-bold transition-all">
-                            Resume
-                        </button>
-</div>
-<!-- Mobile menu button -->
-<div class="-mr-2 flex md:hidden">
-<button class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-surface-dark focus:outline-none" type="button">
-<span class="sr-only">Open main menu</span>
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</div>
-</nav>
-<!-- Main Content -->
-<main class="flex-grow z-10 flex flex-col justify-center">
-<!-- Hero Section -->
-<div class="relative pt-20 pb-32 overflow-hidden">
-<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-<!-- Terminal Badge -->
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-dark border border-white/10 mb-8 animate-fade-in-up">
-<span class="text-primary material-symbols-outlined text-[16px]">terminal</span>
-<span class="text-xs font-mono text-primary font-bold tracking-wide">READY TO DEPLOY</span>
-</div>
-<!-- Headline -->
-<h1 class="text-4xl md:text-6xl lg:text-7xl font-mono font-bold text-white tracking-tight mb-6 max-w-4xl leading-tight">
-                        Building the future with 
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Python</span> 
-                        &amp; 
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">TypeScript</span>
-</h1>
-<!-- Sub-headline -->
-<p class="mt-4 max-w-2xl text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
+
+<body
+    class="bg-slate-50 text-slate-900 dark:bg-background-dark dark:text-white min-h-screen flex flex-col font-sans selection:bg-primary/30 transition-colors duration-300">
+    <div class="relative flex flex-col min-h-screen">
+        <!-- Background Elements -->
+        <div class="fixed inset-0 z-0 pointer-events-none">
+            <!-- Central Nebula Glow -->
+            <div
+                class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[120px]">
+            </div>
+            <!-- Bottom Glow -->
+            <div class="absolute bottom-[-10%] left-1/4 w-[600px] h-[400px] bg-blue-900/10 rounded-full blur-[100px]">
+            </div>
+        </div>
+        <!-- Sticky Navigation -->
+        <header
+            class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-slate-200 bg-white/80 dark:border-white/10 dark:bg-background-dark/80 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="text-background-dark font-black text-xl">V</span>
+                    </div>
+                    <span
+                        class="text-slate-900 dark:text-white font-display font-bold text-xl tracking-tight">Vageesh.init()</span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-2">
+                    <a href="index.html"
+                        class="px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 bg-primary/10 text-primary dark:text-primary shadow-[0_0_10px_rgba(31,215,239,0.2)]">Home</a>
+                    <a href="about.html"
+                        class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white text-slate-600 dark:text-slate-400">About</a>
+                    <a href="projects.html"
+                        class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white text-slate-600 dark:text-slate-400">Projects</a>
+                    <a href="contact.html"
+                        class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white text-slate-600 dark:text-slate-400">Contact</a>
+
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-all duration-300 flex items-center justify-center ml-2">
+                        <span class="material-symbols-outlined text-slate-600 dark:hidden">dark_mode</span>
+                        <span class="material-symbols-outlined text-primary hidden dark:block">light_mode</span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="flex-grow z-10 flex flex-col justify-center">
+            <!-- Hero Section -->
+            <div class="relative pt-20 pb-32 overflow-hidden">
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+                    <!-- Terminal Badge -->
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-dark border border-white/10 mb-8 animate-fade-in-up">
+                        <span class="text-primary material-symbols-outlined text-[16px]">terminal</span>
+                        <span class="text-xs font-mono text-primary font-bold tracking-wide">READY TO DEPLOY</span>
+                    </div>
+                    <!-- Headline -->
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-mono font-bold text-slate-900 dark:text-white tracking-tight mb-6 max-w-4xl leading-tight transition-colors duration-300">
+                        Building the future with
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:to-blue-400">Python</span>
+                        &
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary dark:from-blue-400">TypeScript</span>
+                    </h1>
+                    <!-- Sub-headline -->
+                    <p class="mt-4 max-w-2xl text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
                         Computer Science Graduate | Software Engineer
-                        <br class="hidden md:block"/>
+                        <br class="hidden md:block" />
                         Specializing in scalable backend systems and modern frontend architectures.
                     </p>
-<!-- CTA Buttons -->
-<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-<button class="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-background-dark bg-primary rounded-lg overflow-hidden transition-all duration-300 btn-glow transform hover:-translate-y-1">
-<span class="relative z-10 flex items-center gap-2">
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                        <button
+                            class="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-background-dark bg-primary rounded-lg overflow-hidden transition-all duration-300 btn-glow transform hover:-translate-y-1">
+                            <span class="relative z-10 flex items-center gap-2">
                                 Browse Portfolio
-                                <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
-</span>
-</button>
-<button class="group inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white bg-transparent border border-white/20 rounded-lg hover:bg-white/5 transition-all duration-300 hover:border-primary/50 hover:text-primary">
+                                <span
+                                    class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            </span>
+                        </button>
+                        <button
+                            class="group inline-flex items-center justify-center px-8 py-3 text-base font-bold text-slate-700 dark:text-white bg-transparent border border-slate-300 dark:border-white/20 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 transition-all duration-300 hover:border-primary/50 hover:text-primary">
                             Contact Me
                         </button>
-</div>
-<!-- Abstract Code Decoration -->
-<div class="absolute top-1/2 -right-20 lg:right-0 transform -translate-y-1/2 opacity-10 pointer-events-none select-none hidden lg:block">
-<pre class="font-mono text-sm text-primary text-right">const future = async () =&gt; {
+                    </div>
+                    <!-- Abstract Code Decoration -->
+                    <div
+                        class="absolute top-1/2 -right-20 lg:right-0 transform -translate-y-1/2 opacity-10 pointer-events-none select-none hidden lg:block">
+                        <pre class="font-mono text-sm text-primary text-right">const future = async () =&gt; {
   await build(dreams);
   return success;
 };
                         </pre>
-</div>
-<div class="absolute top-1/3 -left-20 lg:left-0 transform -translate-y-1/2 opacity-10 pointer-events-none select-none hidden lg:block">
-<pre class="font-mono text-sm text-primary text-left">class Engineer {
+                    </div>
+                    <div
+                        class="absolute top-1/3 -left-20 lg:left-0 transform -translate-y-1/2 opacity-10 pointer-events-none select-none hidden lg:block">
+                        <pre class="font-mono text-sm text-primary text-left">class Engineer {
   constructor() {
     this.stack = ['React', 'Py'];
   }
 }
                         </pre>
-</div>
-</div>
-</div>
-<!-- Tech Stack Ticker Section -->
-<div class="w-full bg-surface-dark/30 border-y border-white/5 py-8 overflow-hidden relative group">
-<!-- Fade Gradients -->
-<div class="absolute left-0 top-0 bottom-0 w-20 md:w-40 z-10 bg-gradient-to-r from-background-dark to-transparent"></div>
-<div class="absolute right-0 top-0 bottom-0 w-20 md:w-40 z-10 bg-gradient-to-l from-background-dark to-transparent"></div>
-<!-- Scrolling Container -->
-<div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
-<!-- Item Set 1 -->
-<div class="flex items-center gap-16 px-8">
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#61DAFB] transition-colors duration-300">data_object</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">React</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#2496ED] transition-colors duration-300">deployed_code</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Docker</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3776AB] transition-colors duration-300">terminal</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Python</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3178C6] transition-colors duration-300">code</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">TypeScript</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#FF9900] transition-colors duration-300">cloud</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">AWS</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#00758F] transition-colors duration-300">database</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">SQL</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#F05032] transition-colors duration-300">commit</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Git</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-white transition-colors duration-300">settings_system_daydream</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Linux</span>
-</div>
-</div>
-<!-- Duplicate Item Set for Seamless Loop -->
-<div class="flex items-center gap-16 px-8">
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#61DAFB] transition-colors duration-300">data_object</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">React</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#2496ED] transition-colors duration-300">deployed_code</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Docker</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3776AB] transition-colors duration-300">terminal</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Python</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3178C6] transition-colors duration-300">code</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">TypeScript</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#FF9900] transition-colors duration-300">cloud</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">AWS</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#00758F] transition-colors duration-300">database</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">SQL</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#F05032] transition-colors duration-300">commit</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Git</span>
-</div>
-<div class="flex flex-col items-center gap-2 group/icon">
-<span class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-white transition-colors duration-300">settings_system_daydream</span>
-<span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Linux</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Featured Snippet Card (Visual Filler) -->
-<div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div class="order-2 md:order-1 relative group">
-<!-- Glow behind image -->
-<div class="absolute inset-0 bg-primary/20 blur-2xl rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-<div class="relative rounded-xl overflow-hidden border border-white/10 bg-surface-dark shadow-2xl">
-<div class="flex items-center gap-2 px-4 py-3 bg-[#0d131f] border-b border-white/5">
-<div class="w-3 h-3 rounded-full bg-red-500"></div>
-<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-<div class="w-3 h-3 rounded-full bg-green-500"></div>
-<div class="ml-2 text-xs text-slate-500 font-mono">main.py</div>
-</div>
-<div class="p-6 overflow-x-auto">
-<pre class="text-sm font-mono leading-relaxed"><span class="text-purple-400">def</span> <span class="text-blue-400">solve_problem</span>(complexity):
+                    </div>
+                </div>
+            </div>
+            <!-- Tech Stack Ticker Section -->
+            <div class="w-full bg-surface-dark/30 border-y border-white/5 py-8 overflow-hidden relative group">
+                <!-- Fade Gradients -->
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-20 md:w-40 z-10 bg-gradient-to-r from-background-dark to-transparent">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-20 md:w-40 z-10 bg-gradient-to-l from-background-dark to-transparent">
+                </div>
+                <!-- Scrolling Container -->
+                <div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
+                    <!-- Item Set 1 -->
+                    <div class="flex items-center gap-16 px-8">
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#61DAFB] transition-colors duration-300">data_object</span>
+                            <span
+                                class="text-xs font-mono text-slate-500 group-hover/icon:text-slate-900 dark:group-hover/icon:text-white">React</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#2496ED] transition-colors duration-300">deployed_code</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3776AB] transition-colors duration-300">terminal</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3178C6] transition-colors duration-300">code</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">TypeScript</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#FF9900] transition-colors duration-300">cloud</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#00758F] transition-colors duration-300">database</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">SQL</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#F05032] transition-colors duration-300">commit</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Git</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-white transition-colors duration-300">settings_system_daydream</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Linux</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate Item Set for Seamless Loop -->
+                    <div class="flex items-center gap-16 px-8">
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#61DAFB] transition-colors duration-300">data_object</span>
+                            <span
+                                class="text-xs font-mono text-slate-500 group-hover/icon:text-slate-900 dark:group-hover/icon:text-white">React</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#2496ED] transition-colors duration-300">deployed_code</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3776AB] transition-colors duration-300">terminal</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#3178C6] transition-colors duration-300">code</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">TypeScript</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#FF9900] transition-colors duration-300">cloud</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#00758F] transition-colors duration-300">database</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">SQL</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-[#F05032] transition-colors duration-300">commit</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Git</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group/icon">
+                            <span
+                                class="material-symbols-outlined text-4xl text-slate-500 group-hover/icon:text-white transition-colors duration-300">settings_system_daydream</span>
+                            <span class="text-xs font-mono text-slate-500 group-hover/icon:text-white">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Snippet Card (Visual Filler) -->
+            <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 relative group">
+                        <!-- Glow behind image -->
+                        <div
+                            class="absolute inset-0 bg-primary/20 blur-2xl rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative rounded-xl overflow-hidden border border-white/10 bg-surface-dark shadow-2xl">
+                            <div class="flex items-center gap-2 px-4 py-3 bg-[#0d131f] border-b border-white/5">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <div class="ml-2 text-xs text-slate-500 font-mono">main.py</div>
+                            </div>
+                            <div class="p-6 overflow-x-auto">
+                                <pre class="text-sm font-mono leading-relaxed text-slate-300"><span class="text-purple-400">def</span> <span class="text-blue-400">solve_problem</span>(complexity):
     <span class="text-slate-400">"""Optimizes for efficiency."""</span>
     <span class="text-purple-400">if</span> complexity &gt; <span class="text-orange-400">9000</span>:
         <span class="text-purple-400">return</span> <span class="text-green-400">"Break it down"</span>
@@ -273,49 +316,61 @@
 <span class="text-slate-500"># Deploying solution...</span>
 <span class="text-primary">&gt;&gt;&gt; System.init()</span>
                                 </pre>
-</div>
-</div>
-</div>
-<div class="order-1 md:order-2">
-<div class="flex items-center gap-2 mb-4">
-<span class="material-symbols-outlined text-primary">lightbulb</span>
-<span class="text-primary font-mono text-sm font-bold uppercase tracking-wider">My Philosophy</span>
-</div>
-<h2 class="text-3xl font-bold text-white mb-4">Clean Code, Scalable Systems</h2>
-<p class="text-slate-400 text-lg leading-relaxed">
-                            I don't just write code that works; I write code that lives. My focus is on creating maintainable, efficient, and robust applications that stand the test of time and scale.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary">lightbulb</span>
+                            <span class="text-primary font-mono text-sm font-bold uppercase tracking-wider">My
+                                Philosophy</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Clean Code, Scalable Systems
+                        </h2>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            I don't just write code that works; I write code that lives. My focus is on creating
+                            maintainable, efficient, and robust applications that stand the test of time and scale.
                         </p>
-<a class="inline-flex items-center gap-2 mt-6 text-primary hover:text-white transition-colors font-medium border-b border-primary/30 hover:border-primary pb-1" href="#">
+                        <a class="inline-flex items-center gap-2 mt-6 text-primary hover:text-white transition-colors font-medium border-b border-primary/30 hover:border-primary pb-1"
+                            href="#">
                             Check out my projects
                             <span class="material-symbols-outlined text-sm">arrow_outward</span>
-</a>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="border-t border-white/5 bg-[#080c17] mt-auto">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex flex-col items-center md:items-start gap-2">
-<span class="text-white font-mono font-bold text-lg">Vageesh.init()</span>
-<p class="text-slate-500 text-sm text-center md:text-left">
-                            © 2026. Built with React, Tailwind &amp; Coffee.
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="border-t border-slate-200 dark:border-white/5 bg-slate-100 dark:bg-[#080c17] mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex flex-col items-center md:items-start gap-2">
+                        <span class="text-slate-900 dark:text-white font-mono font-bold text-lg">Vageesh.init()</span>
+
+                        <p class="text-slate-500 text-sm text-center md:text-left">
+                            © 2026. Built with HTML, Tailwind & JS.
                         </p>
-</div>
-<div class="flex items-center gap-6">
-<a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110" href="https://github.com/vageeshnilindu" target="_blank" rel="noopener noreferrer">
-<span class="material-symbols-outlined text-2xl">code</span> <!-- GitHub rep -->
-</a>
-<a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110" href="#">
-<span class="material-symbols-outlined text-2xl">work</span> <!-- LinkedIn rep -->
-</a>
-<a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110" href="#">
-<span class="material-symbols-outlined text-2xl">alternate_email</span> <!-- Twitter rep -->
-</a>
-</div>
-</div>
-</div>
-</footer>
-</div>
-</body></html>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                            href="https://github.com/vageeshnilindu" target="_blank" rel="noopener noreferrer">
+                            <span class="material-symbols-outlined text-2xl">code</span> <!-- GitHub rep -->
+                        </a>
+                        <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                            href="#">
+                            <span class="material-symbols-outlined text-2xl">work</span> <!-- LinkedIn rep -->
+                        </a>
+                        <a class="text-slate-400 hover:text-primary transition-colors transform hover:scale-110"
+                            href="#">
+                            <span class="material-symbols-outlined text-2xl">alternate_email</span> <!-- Twitter rep -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
