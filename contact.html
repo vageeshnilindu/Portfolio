@@ -98,7 +98,10 @@
                         <div
                             class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-3xl border-b border-l border-slate-200 dark:border-border-dark">
                         </div>
-                        <form class="space-y-6">
+                        <form id="contact-form" class="space-y-6">
+                            <!-- Hidden Access Key Input (Optional if using JS, but good fallback) -->
+                            <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <label class="block space-y-2">
                                     <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Identifier
@@ -108,7 +111,7 @@
                                             class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500">
                                             <span class="material-symbols-outlined text-[20px]">badge</span>
                                         </div>
-                                        <input
+                                        <input name="name" id="name" required
                                             class="block w-full rounded-lg border border-slate-200 bg-white dark:border-border-dark dark:bg-background-dark/80 pl-11 pr-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:border-primary transition-all"
                                             placeholder="Enter credentials" type="text" />
                                     </div>
@@ -121,7 +124,7 @@
                                             class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
                                             <span class="material-symbols-outlined text-[20px]">alternate_email</span>
                                         </div>
-                                        <input
+                                        <input name="email" id="email" required
                                             class="block w-full rounded-lg border border-slate-200 bg-white dark:border-border-dark dark:bg-background-dark/80 pl-10 pr-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:border-primary transition-all"
                                             placeholder="Enter frequency" type="email" />
                                     </div>
@@ -135,7 +138,7 @@
                                         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
                                         <span class="material-symbols-outlined text-[20px]">label</span>
                                     </div>
-                                    <input
+                                    <input name="subject" id="subject" required
                                         class="block w-full rounded-lg border border-slate-200 bg-white dark:border-border-dark dark:bg-background-dark/80 pl-10 pr-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                                         placeholder="Mission objective" type="text" />
                                 </div>
@@ -143,21 +146,25 @@
                             <label class="block space-y-2">
                                 <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Transmission Data
                                     [Message]</span>
-                                <textarea
+                                <textarea name="message" id="message" required
                                     class="block w-full rounded-lg border border-slate-200 bg-white dark:border-border-dark dark:bg-background-dark/80 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
                                     placeholder="Enter transmission data..." rows="6"></textarea>
                             </label>
-                            <div class="pt-4 flex items-center justify-between">
+                            <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
                                 <div class="hidden sm:flex items-center gap-2 text-xs text-primary/70 font-mono">
                                     <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                                     SYSTEM READY
                                 </div>
-                                <button
-                                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-primary hover:bg-primary/90 px-8 py-3.5 text-sm font-bold text-background-dark shadow-cyan-glow transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark"
-                                    type="button">
-                                    <span class="material-symbols-outlined text-[20px]">send</span>
-                                    TRANSMIT MESSAGE
-                                </button>
+                                <div class="w-full sm:w-auto flex flex-col gap-2">
+                                    <button id="submit-btn"
+                                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-primary hover:bg-primary/90 px-8 py-3.5 text-sm font-bold text-background-dark shadow-cyan-glow transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark disabled:opacity-70 disabled:cursor-not-allowed"
+                                        type="submit">
+                                        <span class="material-symbols-outlined text-[20px]">send</span>
+                                        <span>TRANSMIT MESSAGE</span>
+                                    </button>
+                                    <!-- Status Message Container -->
+                                    <p id="form-status" class="text-sm font-mono text-center sm:text-right hidden"></p>
+                                </div>
                             </div>
                         </form>
                     </div>
