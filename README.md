@@ -40,7 +40,11 @@ This project represents a modern workflow, combining manual coding with AI assis
 
 ## 📸 Screenshots
 
-![Portfolio Homepage](./images/portfolio-home.png)
+<div align="center">
+  <img src="./images/portfolio-home.png" width="32%" alt="Home Page" />
+  <img src="./images/portfolio-about.png" width="32%" alt="Projects" />
+  <img src="./images/portfolio-contact.png" width="32%" alt="Contact" />
+</div>
 
 ---
 
