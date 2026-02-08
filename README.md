@@ -40,7 +40,7 @@ This project represents a modern workflow, combining manual coding with AI assis
 
 ## 📸 Screenshots
 
-*Coming Soon...*
+![Portfolio Homepage](./images/portfolio-home.png)
 
 ---
 
