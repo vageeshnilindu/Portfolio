@@ -10,7 +10,7 @@
   <br />
 
   <h3>
-    <a href="https://vageeshnilindy]u.github.io/Portfolio">🔴 View Live Demo</a>
+    <a href="https://vageeshnilindu.github.io/Portfolio">🔴 View Live Demo</a>
   </h3>
 </div>
 
