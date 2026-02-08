@@ -10,7 +10,7 @@
   <br />
 
   <h3>
-    <a href="https://vageeshnilindu.github.io/Portfolio" target="_blank" rel="noopener noreferrer>🔴 View Live Demo</a>
+    <a href="https://vageeshnilindu.github.io/Portfolio" target="_blank" rel="noopener noreferrer">🔴 View Live Demo</a>
   </h3>
 </div>
 
